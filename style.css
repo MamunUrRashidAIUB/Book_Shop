@@ -115,25 +115,27 @@ nav ul li .button:hover, .btn:hover {
 .book-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center; /* Center items horizontally */
     margin-top: 20px;
 }
 
 .book-item {
     text-align: center;
     margin: 10px;
+    max-width: 120px; /* Limit the width of each book item */
+    flex: 1 1 auto; /* Allow items to grow and shrink */
 }
 
 .book-item img {
-    width: 150px;
-    height: 200px;
-    object-fit: cover;
+    width: 100px; /* Keep the image width */
+    height: 100px; /* Keep the image height */
+    object-fit: cover; /* Ensure images are cropped to fit */
     border: 1px solid #ccc;
     padding: 5px;
 }
 
 .book-item p {
     margin-top: 10px;
-    font-size: 18px;
+    font-size: 16px; /* Adjust font size for better readability */
     color: black; /* or any color you prefer */
 }

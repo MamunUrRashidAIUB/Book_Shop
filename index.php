@@ -1,6 +1,6 @@
 <?php
 session_start(); // Start the session
-include 'book.php'; // Include the book array
+include 'books.php'; // Include the book array
 ?>
 
 <!DOCTYPE html>
