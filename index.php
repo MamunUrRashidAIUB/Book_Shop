@@ -1,5 +1,6 @@
 <?php
 session_start(); // Start the session
+include 'book.php'; // Include the book array
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +10,6 @@ session_start(); // Start the session
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - ProCare Solutions</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-  
 </head>
 <body>
     <!-- Header -->
@@ -31,8 +31,15 @@ session_start(); // Start the session
 
     <!-- Main Content -->
     <div class="center-content">
-        <h2>Welcome MY BOOK SHOP</h2>
-    
+        <h2>Welcome to MY BOOK SHOP</h2>
+        <div class="book-list">
+            <?php foreach ($books as $book): ?>
+                <div class="book-item">
+                    <img src="<?php echo $book['image']; ?>" alt="<?php echo htmlspecialchars($book['title']); ?>">
+                    <p><?php echo htmlspecialchars($book['title']); ?></p>
+                </div>
+            <?php endforeach; ?>
+        </div>
     </div>
 
     <!-- Footer -->
